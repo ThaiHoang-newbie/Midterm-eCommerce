@@ -1,5 +1,7 @@
 import { useState } from "react";
-// import { v4 as uuidv4 } from 'uuid';
+import Search from '../Search/Search';
+import SearchBar from "../Search/SearchBar";
+
 import axios from 'axios';
 import './Header.css';
 function Header() {
@@ -100,7 +102,7 @@ function Header() {
                     </div>
                 </div>
                 {/* logo section end */}
-                
+
                 {/* header section start */}
                 <div className="header_section">
                     <div className="container">
@@ -134,24 +136,25 @@ function Header() {
                                 </button>
                                 <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a className="dropdown-item" href="#">
-                                        Action
+                                        All
                                     </a>
                                     <a className="dropdown-item" href="#">
-                                        Another action
+                                        Man
                                     </a>
                                     <a className="dropdown-item" href="#">
-                                        Something else here
+                                        Woman
                                     </a>
                                 </div>
                             </div>
                             <div className="main">
                                 {/* Another variation with a button */}
                                 <div className="input-group">
-                                    <input
+                                    {/* <input
                                         type="text"
                                         className="form-control"
                                         placeholder="Search this blog"
-                                    />
+                                    /> */}
+                                    <Search></Search>
                                     <div className="input-group-append">
                                         <button
                                             className="btn btn-secondary"

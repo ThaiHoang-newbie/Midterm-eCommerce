@@ -17,11 +17,9 @@ class Search extends Component {
     render() {
         const { results } = this.state;
         return (
-            <div className="main">
-                <div className="input-group">
-                    <SearchBar setResults={this.setResults} />
-                    <SearchResultList results={results} />
-                </div>
+            <div className='form-control'>
+                <SearchBar setResults={this.setResults} />
+                <SearchResultList results={results} />
             </div>
         );
     }
