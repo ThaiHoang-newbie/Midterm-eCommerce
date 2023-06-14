@@ -11,7 +11,7 @@ function ProductDetail() {
 
     const fetchProduct = async (productId) => {
         try {
-            const response = await fetch(`http://localhost:3000/clothes/${productId}`);
+            const response = await fetch(`https://thaihoang-midterm-api.onrender.com/clothes/${productId}`);
             const data = await response.json();
             setProduct(data);
         } catch (error) {

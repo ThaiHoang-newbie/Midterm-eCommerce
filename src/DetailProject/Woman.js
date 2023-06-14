@@ -9,7 +9,7 @@ function Woman() {
 
     const fetchProducts = async () => {
         try {
-            const response = await fetch('http://localhost:3000/clothes');
+            const response = await fetch('https://thaihoang-midterm-api.onrender.com/clothes');
             const data = await response.json();
             setProducts(data);
         } catch (error) {

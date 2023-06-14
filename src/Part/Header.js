@@ -17,19 +17,21 @@ function Header() {
         e.preventDefault();
         console.log(fullName, content);
 
-        await axios.put('http://localhost:3000/forms/1', {
-            id: 1,
-            fullName: fullName,
-            content: content
-        })
-            .then(function (response) {
-                alert("Successful");
-            })
-            .catch(function (error) {
-                alert(error);
-            });
+        try {
+            const response = await axios.get('https://thaihoang-midterm-api.onrender.com/forms');
+            const data = response.data;
 
+            const newObject = {
+                id: data.length + 1,
+                fullName: fullName,
+                content: content
+            };
 
+            await axios.post('https://thaihoang-midterm-api.onrender.com/forms', newObject);
+            alert("Sending successful");
+        } catch (error) {
+            alert(error);
+        }
 
         setFullName("");
         setContent("");

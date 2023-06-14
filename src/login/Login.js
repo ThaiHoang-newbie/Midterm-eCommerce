@@ -15,7 +15,7 @@
             e.preventDefault();
 
             if (validate()) {
-                fetch(`http://localhost:3000/user?username=${username}`)
+                fetch(`https://thaihoang-midterm-api.onrender.com/user?username=${username}`)
                     .then((res) => res.json())
 
                     .then((resp) => {
@@ -27,7 +27,7 @@
                                 sessionStorage.setItem('username', username);
 
                                 setTimeout(() => {
-                                    window.location = "http://localhost:3001";
+                                    window.location = "http://localhost:3000";
                                 }, 1000);
                             } else {
                                 alert('Wrong password');

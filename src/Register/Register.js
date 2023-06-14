@@ -29,7 +29,7 @@ class Register extends React.Component {
         }
 
         try {
-            const response = await fetch('http://localhost:3000/user', {
+            const response = await fetch('https://thaihoang-midterm-api.onrender.com/user', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -45,7 +45,7 @@ class Register extends React.Component {
                 this.setState({ isSignUp: true, error: '' });
                 alert('Sign up succcesful');
                 setTimeout(() => {
-                    window.location = "http://localhost:3001/login";
+                    window.location = "http://localhost:3000/login";
                 }, 1000)
             } else {
                 // Xử lý lỗi đăng nhập

@@ -4,7 +4,7 @@ const SearchBar = ({ setResults }) => {
     const [input, setInput] = useState('');
 
     const fetchData = (value) => {
-        fetch('http://localhost:3000/clothes')
+        fetch('https://thaihoang-midterm-api.onrender.com/clothes')
             .then((response) => response.json())
             .then((json) => {
                 const results = json.filter((product) => (
