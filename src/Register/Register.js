@@ -45,7 +45,7 @@ class Register extends React.Component {
                 this.setState({ isSignUp: true, error: '' });
                 alert('Sign up succcesful');
                 setTimeout(() => {
-                    window.location = "http://localhost:3000/login";
+                    window.location = "https://midterm-ecommerce-git-main-thaihoang-newbie.vercel.app/login";
                 }, 1000)
             } else {
                 // Xử lý lỗi đăng nhập

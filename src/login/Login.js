@@ -27,7 +27,7 @@
                                 sessionStorage.setItem('username', username);
 
                                 setTimeout(() => {
-                                    window.location = "http://localhost:3000";
+                                    window.location = "https://midterm-ecommerce-git-main-thaihoang-newbie.vercel.app/";
                                 }, 1000);
                             } else {
                                 alert('Wrong password');
